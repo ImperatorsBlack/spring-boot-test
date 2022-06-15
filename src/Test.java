@@ -23,9 +23,9 @@ public class Test {
 
         int[] arr = {1,1,3,2,2,5,4,4,6,8,8,7};
 
-        for(int i=0; i< arr.length; i++){
+        for(int i: arr){
             int count = 0;
-            for (int j=0;j< arr.length;j++){
+            for(int j: arr){
                 if(arr[i] == arr[j]){
                     count++;
                 }
@@ -34,6 +34,8 @@ public class Test {
                 System.out.println(arr[i]+ " ");
             }
         }
+
+        System.out.println("Exit");
 
     }
 }
