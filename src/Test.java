@@ -23,14 +23,22 @@ public class Test {
 
         System.out.println("first = " + first);
 
-        Map<String, String> stringMap = studentList.stream()
-                .collect(Collectors
-                .toMap(Student::getDept, Student::getStudentName, (s, a) -> s + ", " + a)
+//        Map<String, String> stringMap = studentList.stream()
+//                .collect(Collectors
+//                .toMap(Student::getDept, Student::getStudentName, (s, a) -> s + ", " + a)
+//                );
+
+        Map<String, Long> stringMap1 = studentList.stream()
+                .collect(
+                        Collectors.groupingBy(Student::getDept,
+                                                Collectors.counting())
                 );
 
-        stringMap.forEach((k,v)-> System.out.println(k+":"+v));
+//        stringMap.forEach((k,v)-> System.out.println(k+":"+v));
+//
+//        System.out.println("stringMap = " + stringMap);
 
-        System.out.println("stringMap = " + stringMap);
+        System.out.println(stringMap1);
 
 
 
