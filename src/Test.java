@@ -35,7 +35,7 @@ public class Test {
             }
         }
 
-        System.out.println("Exit");
+        System.out.println("Exit Bye");
 
     }
 }
